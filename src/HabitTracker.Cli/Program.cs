@@ -70,9 +70,16 @@ internal static class Program
             throw new CliException("usage: habits check <name|id> [--date yyyy-MM-dd] [--note <text>]");
 
         var habit = Resolve(repo, positional[0]);
-        var date = opts.TryGetValue("date", out var raw)
-            ? DateOnly.ParseExact(raw, "yyyy-MM-dd")
-            : DateOnly.FromDateTime(DateTime.Now);
+        DateOnly date;
+        if (opts.TryGetValue("date", out var raw))
+        {
+            if (!DateOnly.TryParseExact(raw, "yyyy-MM-dd", out date))
+                throw new CliException($"invalid date '{raw}' - use yyyy-MM-dd.");
+        }
+        else
+        {
+            date = DateOnly.FromDateTime(DateTime.Now);
+        }
 
         if (!habit.CheckIn(date, opts.GetValueOrDefault("note")))
             throw new CliException($"'{habit.Name}' is already checked in for {date:yyyy-MM-dd}.");
