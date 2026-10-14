@@ -18,7 +18,7 @@ public sealed class JsonHabitRepository : IHabitRepository
     };
 
     private readonly string _filePath;
-    private readonly Lock _lock = new();
+    private readonly object _lock = new();
     private readonly Dictionary<Guid, Habit> _habits = new();
     private bool _loaded;
 
