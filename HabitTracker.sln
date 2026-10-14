@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitTracker.Core", "src\Ha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitTracker.Cli", "src\HabitTracker.Cli\HabitTracker.Cli.csproj", "{53108633-82C5-40C0-9F2D-40D0950475C7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{68951464-32BE-44FD-826C-F29569532095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HabitTracker.Tests", "tests\HabitTracker.Tests\HabitTracker.Tests.csproj", "{2065D9C7-DEF6-4620-A873-B92A6CD0A1DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +30,14 @@ Global
 		{53108633-82C5-40C0-9F2D-40D0950475C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53108633-82C5-40C0-9F2D-40D0950475C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53108633-82C5-40C0-9F2D-40D0950475C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2065D9C7-DEF6-4620-A873-B92A6CD0A1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2065D9C7-DEF6-4620-A873-B92A6CD0A1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2065D9C7-DEF6-4620-A873-B92A6CD0A1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2065D9C7-DEF6-4620-A873-B92A6CD0A1DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C7DF06AA-F0F1-4127-AF4A-A7D7CA6B4320} = {23ADDF5E-BCEE-4AD7-9795-49D335EC6EBA}
 		{53108633-82C5-40C0-9F2D-40D0950475C7} = {23ADDF5E-BCEE-4AD7-9795-49D335EC6EBA}
+		{2065D9C7-DEF6-4620-A873-B92A6CD0A1DF} = {68951464-32BE-44FD-826C-F29569532095}
 	EndGlobalSection
 EndGlobal
