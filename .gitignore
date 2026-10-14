@@ -1,0 +1,27 @@
+# .NET / C#
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+coverage*.xml
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Build outputs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data produced by the CLI at runtime
+*.habits.json
